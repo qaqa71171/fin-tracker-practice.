@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTracker - Дашборд</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Боковое меню -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-chart-pie"></i> FinTracker
+            </div>
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html"><i class="fas fa-th-large"></i> Дашборд</a>
+                    </li>
+                    <li>
+                        <a href="transactions.html"><i class="fas fa-exchange-alt"></i> Транзакции</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-wallet"></i> Бюджет</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-bar"></i> Отчеты</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cog"></i> Настройки</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
+        <!-- Основной контент -->
+        <main class="content">
+            <header class="top-bar">
+                <h1>Обзор финансов</h1>
+                <div class="user-menu">
+                    <span>Привет, Алексей!</span>
+                    <a href="index.html" class="btn btn-small">Выйти</a>
+                </div>
+            </header>
+
+            <!-- Карточки с финансовыми показателями -->
+            <section class="stats-cards">
+                <div class="card">
+                    <h3>Баланс</h3>
+                    <p class="amount">145 500 ₽</p>
+                </div>
+                <div class="card income">
+                    <h3>Доходы за месяц</h3>
+                    <p class="amount">+ 85 000 ₽</p>
+                </div>
+                <div class="card expense">
+                    <h3>Расходы за месяц</h3>
+                    <p class="amount">- 44 500 ₽</p>
+                </div>
+            </section>
+
+            <!-- Сетка с транзакциями и бюджетом -->
+            <section class="dashboard-grid">
+                <div class="block">
+                    <h2>Последние транзакции</h2>
+                    <ul class="transaction-list">
+                        <li>
+                            <span>Продукты (Пятёрочка)</span>
+                            <span class="expense-tag">- 2 450 ₽</span>
+                        </li>
+                        <li>
+                            <span>Зарплата</span>
+                            <span class="income-tag">+ 85 000 ₽</span>
+                        </li>
+                        <li>
+                            <span>Интернет</span>
+                            <span class="expense-tag">- 590 ₽</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="block">
+                    <h2>Лимиты по категориям</h2>
+                    <div class="budget-item">
+                        <span>Кафе и рестораны</span>
+                        <div class="progress-bar">
+                            <div style="width: 85%;" class="progress-fill danger"></div>
+                        </div>
+                        <span>8 500 / 10 000 ₽</span>
+                    </div>
+                    <div class="budget-item">
+                        <span>Транспорт</span>
+                        <div class="progress-bar">
+                            <div style="width: 40%;" class="progress-fill"></div>
+                        </div>
+                        <span>2 000 / 5 000 ₽</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
